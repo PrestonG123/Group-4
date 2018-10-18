@@ -1,0 +1,49 @@
+﻿<html>
+<title>Group 4 Climate Change</title>
+<h1>Climate Change</h1>
+<p>How has humankind’s relationship with the Earth and natural weather patterns contributed to climate change leading to extreme weather outbreaks?</p>
+
+<body>
+<div class="tab">
+	<button class="tablinks" onclick="changeTab(event, 'placeholder1')" id="defaultOpen">Tab 1</button>
+	<button class="tablinks" onclick="changeTab(event, 'placeholder2')">Tab 2</button>
+	<button class="tablinks" onclick="changeTab(event, 'placeholder3')">Tab 3</button>
+</div>
+
+<div id="placeholder1" class="tabcontent">
+  <h3>Placeholder</h3>
+  <p>Sample Text</p>
+</div>
+<div id="placeholder2" class="tabcontent">
+  <h3>Placeholder 2</h3>
+  <p>Sample Text 2</p>
+</div>
+<div id="placeholder3" class="tabcontent">
+  <h3>Placeholder 3</h3>
+  <p>Sample Text 3</p>
+</div>
+
+<style>
+h1 {color: green; border: 1px solid black}
+.tab {overflow: hidden}
+</style>
+
+<script>
+document.getElementById("defaultOpen").click();
+function changeTab(event, tab) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(tab).style.display = "block";
+	evt.currentTarget.className += " active";
+	
+}
+</script>
+</body>
+</html>
